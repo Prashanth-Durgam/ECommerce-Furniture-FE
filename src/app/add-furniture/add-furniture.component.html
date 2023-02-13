@@ -1,0 +1,19 @@
+
+  <form  [formGroup]="addfurniture" name="loginForm" >
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput type="text" #title="" name="title" id="title" formControlName="title">
+      </mat-form-field> <br>
+      <mat-form-field>
+        <mat-label >Image</mat-label>
+        <input matInput type="text" #content="" name="image" id="image" formControlName="image">
+      </mat-form-field> <br>
+      <mat-form-field>
+        <mat-label >Price</mat-label>
+        <input matInput type="text" #content="" name="price" id="price" formControlName="price">
+      </mat-form-field> <br>
+      <div class="btn">
+        <button mat-raised-button color="accent" [disabled]="!addfurniture.valid" (click)="addFurniture()">Add Furniture</button>
+    </div>
+  </form>
+  

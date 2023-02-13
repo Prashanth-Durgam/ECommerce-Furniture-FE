@@ -1,0 +1,15 @@
+
+  <form  [formGroup]="loginform" name="loginForm" >
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" name="email" id="email" formControlName="email">
+      </mat-form-field> <br>
+      <mat-form-field appearance="outline">
+        <mat-label >PassWord</mat-label>
+        <input matInput type="password" name="password" id="password" formControlName="password">
+      </mat-form-field> <br>
+      <div class="btn">
+        <button mat-raised-button color="accent" [disabled]="!loginform.valid" (click)="OnLogin()">Login</button>
+    </div>
+  </form>
+  

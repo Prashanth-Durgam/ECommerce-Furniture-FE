@@ -1,0 +1,9 @@
+<mat-toolbar class="head" color="warn">
+    <span routerLink=""><img src="../../assets/logo2.jpg"><span class="logo"><span class="letter">W</span>right <span class="letter">W</span>ood</span></span>
+    <span class="example-spacer"></span>
+    <button class="btn bg-transparent"  id="btn" *ngIf="login.adminlog"><mat-icon routerLink="/addfurnitrure">add_circle</mat-icon></button>
+    <button class="btn bg-transparent" id="btn" *ngIf="!login.logged"><mat-icon class="icon" routerLink="/login">person</mat-icon></button>
+    <button class="btn bg-transparent" id="btn" *ngIf="!login.logged"><mat-icon class="icon" routerLink="/register">person_add</mat-icon></button>
+    <button class="btn bg-transparent" id="btn" (click)="logout()" *ngIf="login.logged"><mat-icon>exit_to_app</mat-icon></button>
+    <span *ngIf="login.logged" class="circle" routerLink="/home"> {{login.newname}}</span>
+</mat-toolbar>

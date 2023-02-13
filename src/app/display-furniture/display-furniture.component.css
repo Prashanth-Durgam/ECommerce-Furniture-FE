@@ -1,0 +1,29 @@
+
+   .example-card {
+    width: 230px;
+    margin: 20px;
+    display: inline-table;
+    box-shadow:  0 10px 16px 5px rgba(72, 144, 160, 0.2);
+    height: 230px
+
+  }
+  img{
+    margin-left: 50px;
+     height: 100px;
+     width: 100px;
+   }
+   button{
+    background-color: rebeccapurple;
+  }
+  mat-card-header{
+    margin-left: 50px;
+  }
+  .left{
+    margin-left: 50px;
+  }
+
+
+ 
+ 
+
+ 

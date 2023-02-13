@@ -1,0 +1,13 @@
+
+<div class="left">
+<mat-card class="col-4 example-card"  *ngFor="let furniture of newFurnitues">
+    <img mat-card-image src="../../assets/{{furniture.image}}.jpg">
+    <mat-card-content>
+      <p><b>{{furniture.title}}</b></p>
+      <p> <b>Price: </b>{{furniture.price}}</p>
+      <button mat-button class="btn bg-transparent" routerLink="/addtocart" *ngIf="!loginservice.adminlog" ><mat-icon>add_shopping_cart</mat-icon></button>
+      <button mat-button class="btn bg-transparent" routerLink="/addtocart" *ngIf="loginservice.adminlog"><mat-icon>add_shopping_cart</mat-icon></button>
+      <button mat-button class="btn bg-transparent" routerLink="/delete/{{furniture.title}}"*ngIf="loginservice.adminlog" style="margin-left: 10px;"><mat-icon>delete</mat-icon></button>
+    </mat-card-content>
+  </mat-card>
+</div>

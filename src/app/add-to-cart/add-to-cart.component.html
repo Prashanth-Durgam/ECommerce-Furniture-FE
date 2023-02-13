@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+<form  [formGroup]="addtocart" name="addtocart" >
+    <mat-form-field>
+        <mat-label>Item Quntity</mat-label>
+        <input matInput type="number" #title="" name="itemQty" id="itemQty" formControlName="itemQty">
+      </mat-form-field> <br>
+      <!-- <label>Type</label> -->
+      <h4>Select Size</h4>
+          <select formControlName="itemSize">
+            <option value="Small">S-small</option>
+            <option value="Medium">M-Medium</option>
+            <option value="Large">L-Large</option>
+          </select>
+      <!-- <mat-radio-group  class="radio-group" formControlName="itemSize" id="itemSize">
+          <mat-radio-button class="radio-button"  value="S-small">Admin</mat-radio-button>
+          <mat-radio-button value="M-Medium">M-Medium</mat-radio-button>
+      </mat-radio-group> <br> -->
+      <div class="btn">
+        <button mat-raised-button color="accent" [disabled]="!addtocart.valid" (click)="onSubmit()">Add</button>
+    </div>
+  </form>
+</mat-card-content>
+</mat-card>
